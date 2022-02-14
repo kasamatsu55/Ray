@@ -13,6 +13,8 @@ public class SphereGenerator : MonoBehaviour
             {
                 GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 obj.transform.position = new Vector3((float)x, (float)y, 0f);
+                //obj.GetComponent<Renderer>().material.color = new Color(Random.value,Random.value,Random.value,1.0f);
+                obj.GetComponent<Renderer>().material.color = Random.ColorHSV();
             }
         }
     }
